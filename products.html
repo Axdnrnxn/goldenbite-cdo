@@ -1,11 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Paste the updated <head> section from Step 24 here -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to GoldenBite CDO!</title> <!-- Change title per page -->
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts (Poppins) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome (for icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Axios & SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
     <title>Our Products - GoldenBite CDO</title>
 </head>
 <body class="bg-gray-50">
-    <!-- Paste the updated Navbar code from Step 24 here -->
+<!-- Navbar -->
+<nav class="bg-white/80 backdrop-blur-md shadow-md p-4 flex justify-between items-center sticky top-0 z-50">
+    <a href="index.html" class="text-2xl font-bold text-yellow-600">GoldenBite CDO</a>
+    <div class="hidden md:flex items-center space-x-6">
+        <a href="index.html" class="text-gray-700 hover:text-yellow-600 transition">Home</a>
+        <a href="products.html" class="text-gray-700 hover:text-yellow-600 transition">Products</a>
+        <a href="about.html" class="text-gray-700 hover:text-yellow-600 transition">About Us</a>
+    </div>
+    <div id="nav-links" class="flex items-center space-x-4">
+        <!-- Links will be dynamically updated by app.js -->
+        <a href="login.html" class="text-gray-700 hover:text-yellow-600"><i class="fa-solid fa-user mr-1"></i> Login</a>
+        <a href="cart.html" class="relative text-gray-700 hover:text-yellow-600">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="cart-count" class="absolute -top-2 -right-3 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+        </a>
+    </div>
+</nav>
+
 
     <!-- Page Header -->
     <header class="text-center py-16 bg-yellow-50">
