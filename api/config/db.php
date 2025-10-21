@@ -9,7 +9,7 @@ header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers
 $host = "localhost";
 $db_name = "goldenbite_db";
 $username = "root";
-$password = ""; // Use your MySQL password here, if you have one.
+$password = "";
 
 $conn = null;
 
@@ -24,8 +24,8 @@ try {
     // On connection error, stop and show error message
     http_response_code(500); // Internal Server Error
     echo json_encode(["message" => "Database connection failed: " . $exception->getMessage()]);
-    exit(); // Stop script execution
+    exit();
 }
 
-// If the connection is successful, the $conn variable can be used by other PHP scripts.
+
 ?>
