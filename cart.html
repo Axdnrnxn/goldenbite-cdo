@@ -3,10 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Cart - GoldenBite CDO</title>
+    <title>Welcome to GoldenBite CDO!</title> <!-- Change title per page -->
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts (Poppins) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome (for icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Axios & SweetAlert -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
 </head>
 <body class="bg-gray-100">
 
@@ -41,6 +60,20 @@
             </div>
         </div>
     </main>
+
+<!-- Footer -->
+<footer class="bg-gray-800 text-white mt-16">
+    <div class="container mx-auto p-8 text-center">
+        <h3 class="font-bold text-2xl mb-2 text-yellow-500">GoldenBite CDO</h3>
+        <p class="text-gray-400 mb-4">Your favorite local delicacies from Cagayan de Oro City.</p>
+        <div class="flex justify-center space-x-4">
+            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p class="text-gray-500 text-sm mt-6">&copy; 2025 GoldenBite CDO. All Rights Reserved.</p>
+    </div>
+</footer>
 
     <script src="assets/js/main.js"></script>
     <script src="assets/js/cart.js"></script>
