@@ -63,4 +63,56 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // --- LOGIN FORM LOGIC ---
+const loginForm = document.getElementById('login-form');
+
+if (loginForm) {
+    loginForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        // Get form data
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+
+        // --- Client-Side Validation ---
+        if (!email || !password) {
+            Swal.fire('Incomplete', 'Please enter both email and password.', 'warning');
+            return;
+        }
+
+        // --- API Call using Axios ---
+        try {
+            const response = await api.post('auth/login.php', {
+                email: email,
+                password: password
+            });
+            
+            // On success, save user info to localStorage
+            // This lets other pages know who is logged in.
+            localStorage.setItem('user', JSON.stringify(response.data.user));
+
+            await Swal.fire({
+                icon: 'success',
+                title: 'Login Successful!',
+                text: `Welcome back, ${response.data.user.fullName}!`,
+                timer: 2000,
+                showConfirmButton: false
+            });
+
+            // Redirect to the dashboard
+            window.location.href = 'dashboard.html';
+
+        } catch (error) {
+            // Handle login errors from our PHP API
+            Swal.fire({
+                icon: 'error',
+                title: 'Login Failed',
+                text: error.response?.data?.message || 'An unexpected error occurred.'
+            });
+        }
+    });
+}
+
 });
+
